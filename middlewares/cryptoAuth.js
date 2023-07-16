@@ -5,7 +5,7 @@ const cryptoAuth = (req, res, next) => {
         const cryptoAuthHeader = req.headers.authorization;
 
         if (cryptoAuthHeader && cryptoAuthHeader.startsWith('Bearer')) {
-            const token = cryptoAuthHeader.split(' ')[1]; // Bearer token
+            const token = cryptoAuthHeader.split(' ')[1]; // Bearer coincaptoken
 
             if (token === coinCapApiKey) {
                 next();
